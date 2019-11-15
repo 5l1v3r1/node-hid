@@ -17,7 +17,7 @@
     "test": "node src/test-ci.js",
     "showdevices": "node src/show-devices.js",
     "prepublish": "git submodule update --init",
-    "install": "prebuild-install || node-gyp rebuild",
+    "install": "node-gyp rebuild",
     "prebuild": "prebuild --all --verbose --include-regex \"HID.*node$\"",
     "prebuild-upload": "prebuild --upload-all",
     "prebuild-ci": "prebuild-ci",
@@ -38,8 +38,7 @@
   "license": "(MIT OR X11)",
   "dependencies": {
     "bindings": "^1.5.0",
-    "nan": "^2.14.0",
-    "prebuild-install": "^5.3.3"
+    "nan": "^2.14.0"
   },
   "devDependencies": {
     "prebuild": "^9.1.1",
